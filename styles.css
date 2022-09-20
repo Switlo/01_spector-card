@@ -1,6 +1,7 @@
 :root {
     --h1-font-family: 'DM Sans', sans-serif;
     --text-font-family: 'Roboto', sans-serif;
+    --text-color: #000000;
     --icons-color: #6353FF;
     --background-grey: #F5F6F7;
     --background-white: #FFFFFF;
@@ -16,7 +17,7 @@ body {
     max-width: 600px;
     height: 290px;
     font-family: var(--text-font-family);
-    color: #000000;
+    color: var(--text-color);
     margin: 0 auto;
     padding: 0;
     background-color: var(--background-white);
@@ -63,7 +64,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #000000;    
+    color: var(--text-color);
 }
 
 a:hover {
