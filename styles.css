@@ -8,28 +8,31 @@
   }
 
 html {
-    font-size: 100%;
-    background-color: var(--background-grey);
+    font-size: 100%;    
 }
 
 body {
-    display: block;
-    max-width: 600px;
-    height: 290px;
     font-family: var(--text-font-family);
     color: var(--text-color);
     margin: 0 auto;
     padding: 0;
-    background-color: var(--background-white);
+    background-color: var(--background-grey);
 }
 
-container {
-   display: flex;
-   margin-left: 2.25rem;      
+.container {
+    max-width: 600px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(1, 290px);
+    background-color: var(--background-white);  
+   
 }
 
 .column-1 {
-    flex: 0 1 50%;
+    /* flex: 0 1 50%; */
+    justify-self: start;
+    align-self: start;
+    margin-left: 2.25rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -72,24 +75,26 @@ a:hover {
     color: var(--icons-color);
 }
 .column-2 {
-    flex: 0 1 50%;
-    padding: 0;   
+    display: grid;
+    grid-template-rows: 1fr 2fr; 
+    padding: 0;  
+    margin: 0;
 }
 
 .vector-black {
-   position: relative;
-   left: 231px;
+   align-self: end;
+   justify-self: end;   
 }
 
 .photo {
     width: 291px;
-    position: relative;
     z-index: 1;
-    left: 84px;
-    top: -49px;
-}
+    justify-self: end;
+    position: relative;
+    bottom: 24px;
+   }
 
 .vector-blue {
     position: relative;
-    top: -188px;
+    bottom: 94px;
 }
